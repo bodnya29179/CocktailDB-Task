@@ -1,0 +1,18 @@
+<!-- Filter panel. -->
+<nav class="wrapper" role="navigation">
+  <!-- Cocktail categories. -->
+  <div class="filter-item" *ngFor="let category of categories">
+    <div class="input">  
+      <!-- Category checkboxes. -->
+      <label>
+        <input type="checkbox" name="category" [(ngModel)]="category.checked" value="{{category.strCategory}}">
+        <span class="filter-categories">{{category.strCategory}}</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Filter button. -->
+  <div class="filter-button">
+    <button class="btn" (click)="filterCocktails()">Apply</button>
+  </div>
+</nav>

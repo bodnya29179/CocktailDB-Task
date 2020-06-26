@@ -1,0 +1,23 @@
+<!-- All cocktails of every category. -->
+<section class="wrapper">
+    <div *ngFor="let cocktail of content">
+        <!-- Checking for a category in the filter panel. Show selected categories. -->
+        <div class="d-flex flex-wrap" *ngIf="filteredCategories && exists(cocktail.strCategory)">
+            <!-- Cocktail category. -->
+            <div class="title">
+                <span>{{cocktail.strCategory}}</span>
+            </div>
+            
+            <!-- Show all drinks of the selected category. -->
+            <div class="card card-body w-md-20" *ngFor="let drink of cocktail.drinks">
+                <div>
+                    <!-- Drink image. -->
+                    <img src="{{drink.strDrinkThumb}}" alt="{{drink.strDrink}}">
+
+                    <!-- Drink name. -->
+                    <div class="cocktail-name">{{drink.strDrink}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header, 
+.main {
+    width: 100%;
+}
+
+.main, 
+.filter, 
+.content {
+    display: flex;
+}
+
+.filter {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    margin: 30px 0 0 0;
+    border-right: 1px solid #D0D0D0;
+}
+
+.filter-bar {
+    position: fixed;
+}
+
+.content {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
